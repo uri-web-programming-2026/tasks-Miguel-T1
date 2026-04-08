@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2b1d17;
+  margin: 0;
+  padding: 20px;
+  color: #f3e9dc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.produto,
+.secao {
+  background-color: #3a261e;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #5a3b2e;
+}
+
+.produto {
+  text-align: left;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.galeria img:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+#info-produto h1 {
+  color: #fff4e6;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+p {
+  color: #dbc6b3;
+  font-size: 16px;
+}
+
+.preco {
+  color: #d6a66a;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.preco::before {
+  content: "Preço: ";
+  color: #b97a56;
+}
+
+.descricao {
+  max-height: 80px;
+  overflow: auto;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.botao {
+  background-color: #8b5e3c;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #a06d45;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  color: #f3e9dc;
+}
+
+.lista li:nth-child(odd) {
+  background-color: #4a3127;
+}
+
+.lista li:nth-child(even) {
+  background-color: #5a3b2e;
+}
+
+.lista li::before {
+  content: "• ";
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f3e9dc;
+}
+
+th,
+td {
+  border: 1px solid #6b4a3a;
+  padding: 10px;
+  width: calc(100% / 2);
+  text-align: left;
+}
+
+th {
+  background-color: #5a3a2c;
+}
+
+.redes a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #5a3b2e;
+  color: #f3e9dc;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.redes a:hover {
+  background-color: #8b5e3c;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  #info-produto h1 {
+    font-size: 22px;
+  }
+
+  .preco {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .produto {
+    padding: 15px;
+  }
+
+  .secao {
+    padding: 15px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria img {
+    height: 200px;
+  }
+
+  #info-produto h1 {
+    font-size: 22px;
+  }
+
+  .preco {
+    font-size: 20px;
+  }
+
+  .botao {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .galeria img {
+    height: 180px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
